@@ -85,6 +85,12 @@
           https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
         '';
       };
+      lean4 = {
+        path = ./lean4;
+        description = "A fully-equipped lean4 template with devenv";
+      };
+
+
 
     };
 
