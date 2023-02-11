@@ -25,6 +25,11 @@
         description = "Rust template, using Naersk";
       };
 
+      rust-crane = {
+        path = ./rust-crane-devenv;
+        description = "Rust template, using Crane and Devenv";
+      };
+
       bash-hello = {
         path = ./bash-hello;
         description = "An over-engineered Hello World in bash";
