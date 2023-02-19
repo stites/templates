@@ -4,8 +4,6 @@
   nixConfig.max-jobs = "auto";  # Allow building multiple derivations in parallel
   nixConfig.keep-outputs = true;  # Do not garbage-collect build time-only dependencies (e.g. clang)
 
-  description = "MyPackage";
-
   inputs = {
     # devenv requires 22.11 compatability, so we pin nixpkgs to this package set.
     devenv.url = "github:cachix/devenv";
@@ -50,7 +48,7 @@
 
   outputs = inputs@{ self, lean, ... }: inputs.flake-utils.lib.eachDefaultSystem (system:
     let
-      myPackageName = "MyPackage";
+      myPackageName = throw "Put the package name here!";
       pkgs = import inputs.nixpkgs {
         inherit system;
         config.allowUnfree = true;
